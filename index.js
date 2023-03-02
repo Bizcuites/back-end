@@ -14,7 +14,15 @@ import salesRoutes from "./routes/sales.js";
 import User from "./Models/User.js";
 import Product from "./Models/Product.js";
 import ProductStat from "./Models/ProductStat.js";
-import { dataUser, dataProduct, dataProductStat } from "./Data/index.js";
+import Transaction from "./Models/Transaction.js";
+import OverallStat from "./Models/OverallStat.js";
+import {
+  dataUser,
+  dataProduct,
+  dataProductStat,
+  dataTransaction,
+  dataOverallStat,
+} from "./Data/index.js";
 /*Config*/
 dontenv.config();
 const app = express();
@@ -45,5 +53,8 @@ mongoose
     // Product.insertMany(dataProduct);
     // ProductStat.insertMany(dataProductStat);
     // User.insertMany(dataUser);
+    // Transaction.insertMany(dataTransaction);
+    // AffiliateStat.insertMany(dataAffiliateStat);
+    // OverallStat.insertMany(dataOverallStat);
   })
   .catch((error) => console.log(`${error} did not connect`));
